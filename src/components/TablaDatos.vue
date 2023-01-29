@@ -141,7 +141,7 @@ agregarLibroView(){
 },
 
 mounted(){
-        fetch("https://crudLibro.somee.com/api/libro")
+        fetch("http://crudLibro.somee.com/api/libro")
         .then(respuesta => respuesta.json())
         .then(response => {
             this.libros = response;
@@ -153,7 +153,7 @@ mounted(){
 
      updated(){
 
-      fetch("https://crudLibro.somee.com/api/libro")
+      fetch("http://crudLibro.somee.com/api/libro")
           .then(respuesta => respuesta.json())
           .then(response => {
             this.libros = response;
