@@ -184,7 +184,7 @@ methods:{
         this.libroNuevo.editorial = document.getElementById('Editorial').value;
         this.dialog = false;
 
-        fetch("http://crudLibro.somee.com/api/libro",{
+        fetch("https://crudLibro.somee.com/api/libro",{
             method:'POST',
             body: JSON.stringify(this.libroNuevo),
             headers:{

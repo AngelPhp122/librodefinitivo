@@ -155,7 +155,7 @@ methods:{
 
         //console.log(dataDeInputs);
 
-        fetch("http://crudLibro.somee.com/api/libro",{
+        fetch("https://crudLibro.somee.com/api/libro",{
             method:'PUT',
             body:JSON.stringify(...dataDeInputs),
             headers:{

@@ -63,7 +63,7 @@ data(){
 
       
 
-    fetch(`http://crudLibro.somee.com/api/libro/${this.indexLibro}`,{
+    fetch(`https://crudLibro.somee.com/api/libro/${this.indexLibro}`,{
       method: 'DELETE'
       
     })
