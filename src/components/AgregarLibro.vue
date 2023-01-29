@@ -10,12 +10,12 @@
             <v-card-text>
                 <v-container>
                     <v-row>
-                        <v-col cols="1"
-                    sm="1"
-                    md="2">
-                    <v-text-field label="Numero" id="Numero" type="number"></v-text-field>
+                       
+ <v-col cols="2"
+                    sm="5"
+                    md="3">
+                    <v-text-field label="Autor" id="Autor"></v-text-field>
                         </v-col>
-
                         <v-spacer></v-spacer>
                         <v-col cols="10"
                     sm="1"
@@ -70,10 +70,10 @@
 
                     </v-row>
                     <v-row>
-                         <v-col cols="2"
-                    sm="5"
+                        <v-col cols="10"
+                    sm="1"
                     md="3">
-                    <v-text-field label="Autor" id="Autor"></v-text-field>
+                    <v-text-field label="Nombre" id="Nombre"></v-text-field>
                         </v-col>
                     <v-spacer></v-spacer>
                     <v-col
@@ -85,11 +85,7 @@
                         </v-col>
                     </v-row>
                     <v-row>
-                        <v-col cols="10"
-                    sm="1"
-                    md="3">
-                    <v-text-field label="Nombre" id="Nombre"></v-text-field>
-                        </v-col>
+                        
                     </v-row>
                     <v-row>
                         <v-col cols="10"
@@ -154,7 +150,7 @@ export default {
 data(){
     return {
         libroNuevo:{
-            numero: 0,
+            
       nombre: '',
       genero: '',
       autor: '',
@@ -176,7 +172,7 @@ methods:{
     },
 
     guardarData(){
-        this.libroNuevo.numero = document.getElementById('Numero').value;
+        //this.libroNuevo.numero = document.getElementById('Numero').value;
         this.libroNuevo.nombre = document.getElementById('Nombre').value;
         this.libroNuevo.genero = document.getElementById('Genero').value;
         this.libroNuevo.autor = document.getElementById('Autor').value;
