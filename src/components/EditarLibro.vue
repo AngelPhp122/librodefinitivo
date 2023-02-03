@@ -1,7 +1,7 @@
-<template>
-<div>
+<template >
+<div class="text-center">
   <h1>Componente editar libro</h1>
-
+  
   <v-card >
             <v-card-title align="Center">
               <span class="text-h5" align="Center">Editando libro >>> Numero {{dataId1[0].numero}}  {{dataId1[0].nombre}}</span>
@@ -13,7 +13,7 @@
                      
                         <v-col cols="12"
                     sm="6"
-                    md="4">
+                    md="4"> 
                     <v-text-field label="Nombre" id="Nombre" v-bind:value="dataId1[0].nombre"></v-text-field>
                         </v-col>
                         <v-col cols="12"

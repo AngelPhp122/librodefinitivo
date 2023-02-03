@@ -2,6 +2,7 @@
   <div>
     <h1 align="center">TablaDatos</h1>
     
+    
     <div v-if="redirigir == false">
       <div align="right">
         <v-btn align="center" color="green"><v-icon  color="white" @click="agregarLibroView()" align="center">mdi-plus</v-icon></v-btn>
@@ -38,7 +39,7 @@
     </v-data-table>
   </v-card>
     </div>
-     <AgregarLibro @regresar="redirigir = $event" v-else-if="agregar==true" />
+     <AgregarLibro @regresar="redirigir = $event" v-else-if="agregar==true"  />
     <EditarLibro @regresar="redirigir = $event"  v-else-if="editar==true" v-bind:dataId1="idLibro" />
     <EliminarLibro @regresar="redirigir = $event" v-else-if="eliminar == true"  v-bind:dataId2="idLibro2" v-bind:activador="eliminar"/>
   </div>
@@ -51,6 +52,7 @@ import AgregarLibro from '../components/AgregarLibro.vue';
 import EditarLibro from '../components/EditarLibro.vue';
 import EliminarLibro from '../components/EliminarLibro.vue';
 
+
 export default {
 
 
@@ -58,7 +60,8 @@ components:{
 
 AgregarLibro,
 EditarLibro,
-EliminarLibro
+EliminarLibro,
+
 
 
 },
@@ -96,7 +99,8 @@ return{
     eliminar: false,
     redirigir: false,
     idLibro:[],
-    idLibro2:[]
+    idLibro2:[],
+    activator: false
 }
 
 },
