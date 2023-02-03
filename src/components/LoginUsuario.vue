@@ -3,7 +3,7 @@
 
 <h1>Esto es un login para prueba del JWT que se implementara luego</h1>
 
-<v-col cols="1"
+<v-col cols="10"
 sm="5"
 md="5" >
     <v-text-field  label="Usuario" id="usuario">
@@ -13,7 +13,7 @@ md="5" >
 
 
 
-<v-col cols="1"
+<v-col cols="10"
 sm="5"
 md="5" >
     <v-text-field  label="Clave" id="clave">
