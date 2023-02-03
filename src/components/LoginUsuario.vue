@@ -2,7 +2,7 @@
 <div align="center">
 
 <h1>Esto es un login para prueba del JWT que se implementara luego</h1>
-<v-row >
+
 <v-col cols="1"
 sm="5"
 md="5" >
@@ -10,9 +10,9 @@ md="5" >
 
     </v-text-field>
 </v-col>
-</v-row>
 
-<v-row >
+
+
 <v-col cols="1"
 sm="5"
 md="5" >
@@ -20,7 +20,7 @@ md="5" >
 
     </v-text-field>
 </v-col>
-</v-row>
+
 
 <v-btn @click="logeoUsuario">Login</v-btn>
 
