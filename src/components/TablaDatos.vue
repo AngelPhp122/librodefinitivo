@@ -165,7 +165,7 @@ mounted(){
 
      updated(){
       const token = localStorage.getItem("token");
-      fetch("https://localhost:7028/api/libro",{
+      fetch("https://crudLibro.somee.com/api/usuario",{
         method:'GET',
         headers:{
           'Authorization':`Bearer ${token}`
