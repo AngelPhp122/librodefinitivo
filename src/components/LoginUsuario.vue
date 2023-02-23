@@ -47,23 +47,37 @@ methods:{
         let claveusuario = document.getElementById('clave').value; 
 
         const objeto = {
-            nombreUsuario: nombreusuario,
-            claveUsuario: claveusuario
+            username: nombreusuario,
+            password: claveusuario
         }
 
         console.log(nombreusuario);
         console.log(claveusuario);
-       await fetch("https://crudLibro.somee.com/api/usuario",{
+       await fetch("https://localhost:7028/api/login",{
             method: 'POST',
             body: JSON.stringify(objeto),
             headers: {
-                'Content-Type':'application/json'
+                'Access-Control-Allow-Origin':'*',
+                'Content-Type':'application/json',
+                'Authorization': 'Bearer Token'
             }
         })
-       .then(resp=>resp.json())
+       .then(resp=>resp.text())
        .then(respuesta => {
-         this.sesion = respuesta;
-        console.log(this.sesion)
+
+        if(respuesta != null){
+
+            let token = respuesta;
+            console.log(token);
+            localStorage.setItem("token",token)
+            
+            this.sesion = true;
+            console.log(this.sesion)
+        }else{
+
+            console.log(false);
+        }
+         
        })
          this.$emit('logueo', this.sesion);
     }

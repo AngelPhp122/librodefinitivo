@@ -147,6 +147,8 @@
 <script>
 export default {
 
+
+
 data(){
     return {
         libroNuevo:{
@@ -180,6 +182,7 @@ methods:{
         this.libroNuevo.editorial = document.getElementById('Editorial').value;
         this.dialog = false;
 
+        //console.log(process.env.APIURL);
         fetch("https://crudLibro.somee.com/api/libro",{
             method:'POST',
             body: JSON.stringify(this.libroNuevo),

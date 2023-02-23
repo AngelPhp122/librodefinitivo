@@ -73,17 +73,17 @@ return{
     search: '',
     headers:[
         {
-            text: "Numero",
+            text: "id_libro",
             align: 'start',
             filterbase: false,
-            value: 'numero',    
+            value: 'id_libro',    
         },
 
-        {text: 'Nombre', value: 'nombre'},
+        {text: 'Titulo', value: 'titulo'},
         {text: 'Genero', value: 'genero'},
         {text: 'Autor', value: 'autor'},
-        {text: 'Año pub.', value: 'anio__publicacion'},
-        {text: 'Editorial', value: 'editorial'},
+        {text: 'fecha_publicacion', value: 'fecha_publicacion'},
+        //{text: 'Editorial', value: 'editorial'},
 
 
         {
@@ -145,7 +145,15 @@ agregarLibroView(){
 },
 
 mounted(){
-        fetch("https://crudLibro.somee.com/api/libro")
+
+        const token = localStorage.getItem("token");
+        console.log(token);
+        fetch("https://localhost:7028/api/libro",{
+          method: 'GET',
+          headers:{
+            'Authorization':`Bearer ${token}`
+          }
+        })
         .then(respuesta => respuesta.json())
         .then(response => {
             this.libros = response;
@@ -156,8 +164,13 @@ mounted(){
     },
 
      updated(){
-
-      fetch("https://crudLibro.somee.com/api/libro")
+      const token = localStorage.getItem("token");
+      fetch("https://localhost:7028/api/libro",{
+        method:'GET',
+        headers:{
+          'Authorization':`Bearer ${token}`
+        }
+      })
           .then(respuesta => respuesta.json())
           .then(response => {
             this.libros = response;
