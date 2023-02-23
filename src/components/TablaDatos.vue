@@ -148,7 +148,7 @@ mounted(){
 
         const token = localStorage.getItem("token");
         console.log(token);
-        fetch("https://localhost:7028/api/libro",{
+        fetch("https://crudLibro.somee.com/api/libro",{
           method: 'GET',
           headers:{
             'Authorization':`Bearer ${token}`
