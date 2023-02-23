@@ -53,7 +53,7 @@ methods:{
 
         console.log(nombreusuario);
         console.log(claveusuario);
-       await fetch("https://crudLibro.somee.com/api/login",{
+       await fetch("https://crudLibro.somee.com/api/usuario",{
             method: 'POST',
             body: JSON.stringify(objeto),
             headers: {
